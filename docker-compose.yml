@@ -1,0 +1,27 @@
+version: '3'
+services:
+  app:
+    container_name: sapia-login
+    build: .
+    ports:
+      - "3000:3011"
+    depends_on:
+      - mongodb
+    networks:
+      - sapia
+
+  mongodb:
+    container_name: mongodb
+    image: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo-data:/data/db
+    networks:
+      - sapia
+
+networks:
+  sapia:
+
+volumes:
+  mongo-data:
