@@ -1,11 +1,9 @@
-
-
-
 ## Clone the repo
 
 ```bash
 $ git clone https://github.com/maishit/sapia-login.git 
 $ cd sapia-login
+$ cp .env.example .env
 ```
 
 ## Building and running the container
@@ -17,7 +15,7 @@ $ docker-compose up
 ## Seeding data
 
 ```bash
-$ npm run seed
+$ docker exec -it sapia-login npm run seed
 ```
 
 ## Testing login API
@@ -50,4 +48,5 @@ $ yarn run test:e2e
 # test coverage
 $ yarn run test:cov
 ```
+<img width="764" alt="image" src="https://github.com/maishit/sapia-login/assets/143973635/9b8c8824-a985-46e9-bf13-94f60361eaaa">
 
